@@ -1,0 +1,2534 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>The Royal Wedding of Yogalakshmi & Manoj | 20 January 2027</title>
+  <meta name="description" content="Official Royal Wedding Invitation of Yogalakshmi & Manoj. Celebrating our auspicious union on 20 January 2027 at MJ Mahal, Ranipet, Tamil Nadu." />
+  <meta name="theme-color" content="#1a040b" />
+
+  <!-- Preconnect to Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Royal Serif, Tamil Vedic Calligraphy & Modern Sanskrit Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;600;700;900&family=Cinzel:wght@400;500;600;700;800&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       ROYAL HERITAGE DESIGN SYSTEM & TOKENS
+       ========================================================================== */
+    :root {
+      /* Royal Kanjeevaram & Temple Gold Palette */
+      --wine-950: #120207;
+      --wine-900: #1a040b;
+      --wine-850: #250511;
+      --wine-800: #330818;
+      --wine-700: #460c23;
+      --wine-600: #5d1230;
+
+      --gold-100: #fbf5df;
+      --gold-200: #f5e7b5;
+      --gold-300: #edd285;
+      --gold-400: #dfb751;
+      --gold-500: #d4af37; /* Pure Temple Gold */
+      --gold-600: #b58d24;
+      --gold-700: #8c6a15;
+
+      --kumkum-red: #9e1b32;
+      --haldi-gold: #ffb703;
+      --sandalwood: #e9d8c0;
+      --sacred-ivory: #fffefb;
+      --text-gold-light: #f7eed3;
+      --text-muted: #c9b4a6;
+
+      --gold-foil-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+      --gold-foil-sheen: linear-gradient(90deg, #d4af37, #fff4cc, #d4af37, #aa7c11, #d4af37);
+      --velvet-card-bg: rgba(30, 5, 14, 0.72);
+      --velvet-border: rgba(212, 175, 55, 0.28);
+      --velvet-border-glow: rgba(212, 175, 55, 0.45);
+
+      --font-display: 'Cinzel Decorative', Georgia, serif;
+      --font-serif: 'Cinzel', Garamond, serif;
+      --font-editorial: 'Playfair Display', Georgia, serif;
+      --font-script: 'Great Vibes', cursive;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+      --ease-royal: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* CSS Reset & Global Styling */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      background-color: var(--wine-950);
+      color: var(--text-gold-light);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--wine-950);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(93, 18, 48, 0.35) 0%, transparent 60%),
+        radial-gradient(circle at 100% 50%, rgba(70, 12, 35, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 0% 80%, rgba(51, 8, 24, 0.25) 0%, transparent 50%);
+      background-attachment: fixed;
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Selection */
+    ::selection {
+      background: var(--gold-500);
+      color: #120207;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #120207;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, var(--gold-600), var(--gold-400), var(--gold-700));
+      border-radius: 4px;
+    }
+
+    /* Background Canvas Layers */
+    #particles-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    #blessing-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Noise Texture Film Grain */
+    .bg-grain-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* ==========================================================================
+       ROYAL ENVELOPE / PATRIKA UNVEILING CURTAIN (INITIAL CEREMONY)
+       ========================================================================== */
+    .royal-patrika-screen {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 40%, #2f0717 0%, #150208 75%, #0d0105 100%);
+      z-index: 99990;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      transition: opacity 1.2s var(--ease-royal), transform 1.2s var(--ease-royal), visibility 1.2s;
+    }
+
+    .royal-patrika-screen.unveiled {
+      opacity: 0;
+      transform: scale(1.08);
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    .patrika-envelope-stage {
+      position: relative;
+      width: min(92vw, 540px);
+      background: linear-gradient(145deg, #300615 0%, #1c030c 100%);
+      border: 1px solid var(--gold-500);
+      border-radius: 1.5rem;
+      padding: 3rem 2.2rem;
+      text-align: center;
+      box-shadow: 
+        0 25px 80px rgba(0, 0, 0, 0.9),
+        0 0 40px rgba(212, 175, 55, 0.2),
+        inset 0 1px 2px rgba(255, 244, 204, 0.4);
+      cursor: pointer;
+      transition: transform 0.4s var(--ease-royal), box-shadow 0.4s ease;
+    }
+
+    .patrika-envelope-stage:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 
+        0 35px 95px rgba(0, 0, 0, 0.95),
+        0 0 50px rgba(212, 175, 55, 0.35);
+    }
+
+    /* Sacred Kolam Border inside Envelope */
+    .patrika-inner-border {
+      position: absolute;
+      inset: 12px;
+      border: 1px dashed rgba(212, 175, 55, 0.4);
+      border-radius: 1rem;
+      pointer-events: none;
+    }
+
+    /* Corner Mandap Accents */
+    .corner-mandap-motif {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: var(--gold-400);
+      stroke-width: 1.5;
+    }
+    .corner-tl { top: 18px; left: 18px; }
+    .corner-tr { top: 18px; right: 18px; transform: scaleX(-1); }
+    .corner-bl { bottom: 18px; left: 18px; transform: scaleY(-1); }
+    .corner-br { bottom: 18px; right: 18px; transform: scale(-1); }
+
+    /* Auspicious Shloka */
+    .shloka-invocation {
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      letter-spacing: 0.25em;
+      color: var(--gold-300);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .shloka-subtext {
+      font-family: var(--font-editorial);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--sandalwood);
+      margin-bottom: 2rem;
+    }
+
+    /* Royal Wax Seal with Intertwined Monogram */
+    .wax-seal-wrapper {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 1.8rem;
+    }
+
+    .wax-seal-outer-flame {
+      position: absolute;
+      inset: -10px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.35) 0%, transparent 70%);
+      animation: pulseAura 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulseAura {
+      0% { transform: scale(0.9); opacity: 0.4; }
+      100% { transform: scale(1.15); opacity: 0.85; }
+    }
+
+    .wax-seal-stamp {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #b8233e 0%, #750e21 60%, #4a0614 100%);
+      border: 3px solid var(--gold-400);
+      box-shadow: 
+        0 10px 25px rgba(0, 0, 0, 0.7),
+        inset 0 2px 4px rgba(255, 255, 255, 0.4),
+        inset 0 -3px 6px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+
+    .patrika-envelope-stage:hover .wax-seal-stamp {
+      transform: scale(1.05) rotate(4deg);
+    }
+
+    .wax-seal-monogram {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold-200);
+      line-height: 1;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+      letter-spacing: 0.05em;
+    }
+
+    .wax-seal-sub {
+      font-family: var(--font-serif);
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      color: var(--gold-300);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .patrika-headline {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--sacred-ivory);
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+    }
+
+    .patrika-names {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      letter-spacing: 0.1em;
+      color: var(--gold-400);
+      margin-bottom: 1.8rem;
+    }
+
+    .patrika-btn-open {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.85rem 2.2rem;
+      background: var(--gold-foil-gradient);
+      border: none;
+      border-radius: 999px;
+      color: #1a040b;
+      font-family: var(--font-serif);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .patrika-btn-open:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 35px rgba(212, 175, 55, 0.6);
+    }
+
+    .patrika-skip-text {
+      margin-top: 1.4rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      color: var(--gold-300);
+      opacity: 0.7;
+      text-decoration: underline;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    .patrika-skip-text:hover { opacity: 1; }
+
+    /* ==========================================================================
+       TOP FLOATING ROYAL NAVIGATION BAR (AWWWARDS-TIER)
+       ========================================================================== */
+    .royal-floating-nav {
+      position: fixed;
+      top: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 900;
+      width: min(92vw, 860px);
+      background: rgba(26, 4, 11, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--velvet-border);
+      border-radius: 999px;
+      padding: 0.55rem 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.65), 0 0 15px rgba(212, 175, 55, 0.15);
+      transition: all 0.4s var(--ease-royal);
+    }
+
+    .nav-brand-monogram {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gold-400);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .nav-menu-links {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      list-style: none;
+    }
+
+    .nav-link-item {
+      font-family: var(--font-serif);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-gold-light);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link-item:hover, .nav-link-item.active {
+      color: var(--gold-400);
+    }
+
+    .nav-action-cluster {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .btn-nav-blessing {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--gold-500);
+      border-radius: 999px;
+      padding: 0.4rem 0.9rem;
+      font-family: var(--font-serif);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-200);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-nav-blessing:hover {
+      background: var(--gold-500);
+      color: #1a040b;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Floating Audio Engine Button */
+    .audio-toggle-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 950;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(26, 4, 11, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--gold-500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.3);
+      transition: all 0.3s var(--ease-spring);
+    }
+
+    .audio-toggle-btn:hover {
+      transform: scale(1.1) rotate(15deg);
+      box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
+    }
+
+    .audio-sound-rings {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 1px dashed rgba(212, 175, 55, 0.6);
+      animation: spinRings 12s linear infinite;
+    }
+
+    @keyframes spinRings {
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Floating Shower Blessings Button */
+    .blessing-float-btn {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      z-index: 950;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.75rem 1.4rem;
+      background: linear-gradient(135deg, #3d071b 0%, #1f030d 100%);
+      border: 1px solid var(--gold-500);
+      border-radius: 999px;
+      color: var(--gold-200);
+      font-family: var(--font-serif);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.25);
+      cursor: pointer;
+      transition: all 0.3s var(--ease-royal);
+    }
+
+    .blessing-float-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 14px 40px rgba(212, 175, 55, 0.45);
+      border-color: #ffe89e;
+    }
+
+    /* Inactivity Hand Scroll Prompt */
+    .hand-scroll-prompt {
+      position: fixed;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 850;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .hand-scroll-prompt.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .hand-icon-bounce {
+      width: 38px;
+      height: 38px;
+      animation: handScrollBounce 2s infinite ease-in-out;
+    }
+
+    @keyframes handScrollBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(12px); }
+    }
+
+    .hand-scroll-prompt span {
+      font-family: var(--font-serif);
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-300);
+      background: rgba(18, 2, 7, 0.75);
+      padding: 0.2rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    /* Custom Golden Cursor (Desktop) */
+    @media (pointer: fine) {
+      .cursor-dot {
+        position: fixed;
+        width: 8px;
+        height: 8px;
+        background: var(--gold-400);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 99999;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 12px var(--gold-400);
+        transition: transform 0.08s ease-out, width 0.3s ease, height 0.3s ease;
+      }
+      .cursor-ring {
+        position: fixed;
+        width: 36px;
+        height: 36px;
+        border: 1px solid var(--gold-500);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 99998;
+        transform: translate(-50%, -50%);
+        transition: transform 0.18s ease-out, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION COMMON LAYOUT & TYPOGRAPHY
+       ========================================================================== */
+    section {
+      position: relative;
+      padding: 7rem 2rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section-header-royal {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 4.5rem;
+      position: relative;
+    }
+
+    .sacred-deity-invocation {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: clamp(0.75rem, 1.4vw, 0.95rem);
+      letter-spacing: 0.3em;
+      color: var(--gold-400);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .script-sub-title {
+      font-family: var(--font-script);
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      color: var(--gold-300);
+      display: block;
+      margin-bottom: 0.2rem;
+      text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .royal-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--sacred-ivory);
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .royal-heading-gold {
+      background: var(--gold-foil-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Sacred Lotus / Diya Divider Motif */
+    .sacred-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      margin: 1.6rem auto 0;
+      max-width: 380px;
+    }
+
+    .sacred-divider .flourish-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+    }
+
+    .sacred-divider svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--gold-400);
+      filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.5));
+    }
+
+    /* Double Bezel Card Architecture (Physical Machined Luxury) */
+    .double-bezel-card {
+      position: relative;
+      background: rgba(30, 5, 14, 0.5);
+      border: 1px solid var(--velvet-border);
+      border-radius: 2rem;
+      padding: 0.6rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      transition: transform 0.5s var(--ease-royal), box-shadow 0.5s ease, border-color 0.5s ease;
+    }
+
+    .double-bezel-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--velvet-border-glow);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85), 0 0 35px rgba(212, 175, 55, 0.25);
+    }
+
+    .double-bezel-core {
+      background: linear-gradient(160deg, rgba(38, 7, 18, 0.85) 0%, rgba(20, 3, 9, 0.95) 100%);
+      border: 1px solid rgba(255, 244, 204, 0.08);
+      border-radius: calc(2rem - 0.4rem);
+      padding: 2.8rem 2.2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       HERO OPENING SECTION (ROYAL TEMPLE MANDAPAM)
+       ========================================================================== */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Rotating Sacred Mandala Backdrop */
+    .hero-sacred-mandala {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: min(90vw, 750px);
+      height: min(90vw, 750px);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.22;
+      animation: slowRotateMandala 120s linear infinite;
+    }
+
+    @keyframes slowRotateMandala {
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 980px;
+    }
+
+    .sacred-shanti-mantra {
+      display: inline-block;
+      font-family: var(--font-serif);
+      font-size: clamp(0.72rem, 1.2vw, 0.88rem);
+      letter-spacing: 0.35em;
+      color: var(--gold-400);
+      text-transform: uppercase;
+      padding: 0.4rem 1.6rem;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 999px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+    }
+
+    .hero-announcement {
+      font-family: var(--font-serif);
+      font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+      letter-spacing: 0.38em;
+      color: var(--sandalwood);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-couple-titles {
+      font-family: var(--font-display);
+      font-size: clamp(3.2rem, 7.5vw, 6.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: 0.08em;
+      color: var(--sacred-ivory);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-ampersand-sign {
+      display: block;
+      font-family: var(--font-script);
+      font-size: clamp(3rem, 6.5vw, 5.2rem);
+      color: var(--gold-400);
+      line-height: 0.7;
+      margin: 0.8rem 0;
+      text-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+    }
+
+    .hero-sub-verse {
+      font-family: var(--font-editorial);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      color: var(--text-gold-light);
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    /* Royal Badges Pill Row */
+    .hero-ceremonial-pills {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-bottom: 3rem;
+    }
+
+    .ceremonial-pill-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.75rem 1.6rem;
+      background: rgba(30, 5, 14, 0.75);
+      border: 1px solid var(--gold-500);
+      border-radius: 999px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    .ceremonial-pill-item svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--gold-400);
+    }
+
+    .ceremonial-pill-item span {
+      font-family: var(--font-serif);
+      font-size: 0.82rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sacred-ivory);
+      font-weight: 500;
+    }
+
+    /* Scroll Down Indicator */
+    .hero-scroll-cue {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--gold-300);
+      text-decoration: none;
+      font-family: var(--font-serif);
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      transition: opacity 0.3s ease;
+    }
+
+    .hero-scroll-cue:hover { opacity: 1; color: var(--gold-200); }
+
+    .cue-diya-icon {
+      width: 28px;
+      height: 28px;
+      animation: flickerFlame 3s infinite alternate;
+    }
+
+    @keyframes flickerFlame {
+      0%, 100% { filter: drop-shadow(0 0 6px rgba(255, 183, 3, 0.6)); }
+      50% { filter: drop-shadow(0 0 14px rgba(255, 183, 3, 0.9)); }
+    }
+
+    /* ==========================================================================
+       SECTION 2: THE AUSPICIOUS COUPLE (ROYAL TEMPLE SANCTUM ARCHES)
+       ========================================================================== */
+    .couple-section {
+      position: relative;
+    }
+
+    .couple-portrait-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 860px) {
+      .couple-portrait-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+    }
+
+    .couple-alcove-card {
+      position: relative;
+      text-align: center;
+    }
+
+    /* South Indian Temple Arch Framing */
+    .temple-arch-enclosure {
+      position: relative;
+      width: min(85vw, 360px);
+      height: 480px;
+      margin: 0 auto 2.2rem;
+      border-radius: 180px 180px 1.5rem 1.5rem;
+      padding: 10px;
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0.45) 0%, rgba(51, 8, 24, 0.8) 100%);
+      box-shadow: 
+        0 25px 60px rgba(0, 0, 0, 0.85),
+        0 0 35px rgba(212, 175, 55, 0.2);
+    }
+
+    .temple-arch-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 172px 172px 1.2rem 1.2rem;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid var(--gold-400);
+      background: #19030c;
+    }
+
+    .temple-arch-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: contrast(1.05) saturate(1.05);
+      transition: transform 0.8s var(--ease-royal);
+    }
+
+    .couple-alcove-card:hover .temple-arch-inner img {
+      transform: scale(1.05);
+    }
+
+    /* Golden Arch Crown Motif */
+    .arch-crown-crest {
+      position: absolute;
+      top: -24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 58px;
+      height: 44px;
+      z-index: 5;
+      fill: var(--gold-400);
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8));
+    }
+
+    .couple-role-tag {
+      display: inline-block;
+      font-family: var(--font-serif);
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-400);
+      padding: 0.35rem 1.2rem;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 999px;
+      margin-bottom: 0.8rem;
+    }
+
+    .couple-royal-name {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.2vw, 2.6rem);
+      font-weight: 700;
+      color: var(--sacred-ivory);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+
+    .couple-parents-tribute {
+      font-family: var(--font-serif);
+      font-size: 0.82rem;
+      color: var(--sandalwood);
+      letter-spacing: 0.1em;
+      margin-bottom: 1.2rem;
+    }
+
+    .couple-heart-quote {
+      font-family: var(--font-editorial);
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text-gold-light);
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    /* ==========================================================================
+       SECTION 3: SACRED CEREMONIAL DETAILS (AUTHENTIC INDIAN ICONS ONLY - NO DOLLARS)
+       ========================================================================== */
+    .sacred-details-section {
+      position: relative;
+    }
+
+    .details-royal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 992px) {
+      .details-royal-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .ceremony-card {
+      position: relative;
+      background: var(--velvet-card-bg);
+      border: 1px solid var(--velvet-border);
+      border-radius: 1.8rem;
+      padding: 3rem 2.2rem;
+      text-align: center;
+      transition: all 0.4s var(--ease-royal);
+      backdrop-filter: blur(14px);
+    }
+
+    .ceremony-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold-400);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.3);
+    }
+
+    .ceremony-card.highlight {
+      border: 1px solid var(--gold-500);
+      background: linear-gradient(160deg, rgba(50, 9, 24, 0.85) 0%, rgba(26, 4, 11, 0.95) 100%);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(212, 175, 55, 0.25);
+    }
+
+    /* Sacred Icon Pod (Diya, Kalasam, Mandapam - Completely Handcrafted SVGs) */
+    .sacred-icon-pod {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 1.8rem;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, rgba(212, 175, 55, 0.25) 0%, rgba(30, 5, 14, 0.9) 80%);
+      border: 1.5px solid var(--gold-500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+      transition: transform 0.4s ease;
+    }
+
+    .ceremony-card:hover .sacred-icon-pod {
+      transform: scale(1.1) rotate(5deg);
+      border-color: #fff4cc;
+      box-shadow: 0 0 35px rgba(212, 175, 55, 0.5);
+    }
+
+    .sacred-icon-pod svg {
+      width: 38px;
+      height: 38px;
+      fill: none;
+      stroke: var(--gold-300);
+      stroke-width: 1.5;
+    }
+
+    .ceremony-badge {
+      font-family: var(--font-serif);
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-400);
+      margin-bottom: 0.8rem;
+    }
+
+    .ceremony-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--sacred-ivory);
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
+
+    .ceremony-time {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--gold-300);
+      margin-bottom: 0.8rem;
+    }
+
+    .ceremony-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       SECTION 4: THE VEDIC SCHEDULE & RITUALS (TAMIL WEDDING TRADITIONS)
+       ========================================================================== */
+    .schedule-grand-container {
+      max-width: 920px;
+      margin: 0 auto;
+      background: rgba(28, 4, 11, 0.7);
+      border: 1px solid var(--velvet-border);
+      border-radius: 2rem;
+      padding: 3.5rem 3rem;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.75);
+    }
+
+    @media (max-width: 768px) {
+      .schedule-grand-container {
+        padding: 2.2rem 1.4rem;
+      }
+    }
+
+    .schedule-event-day-cluster {
+      margin-bottom: 3.2rem;
+    }
+
+    .schedule-day-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .day-banner-title {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      color: var(--gold-300);
+      letter-spacing: 0.08em;
+    }
+
+    .day-banner-tag {
+      font-family: var(--font-serif);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--gold-500);
+      border-radius: 999px;
+      color: var(--gold-200);
+    }
+
+    .ritual-stream {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .ritual-stream-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.8rem;
+      position: relative;
+    }
+
+    @media (max-width: 600px) {
+      .ritual-stream-item {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    .ritual-time-badge {
+      min-width: 125px;
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--gold-400);
+      letter-spacing: 0.05em;
+    }
+
+    .ritual-details-box h4 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--sacred-ivory);
+      margin-bottom: 0.3rem;
+    }
+
+    .ritual-details-box p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       SECTION 5: SACRED SAPTAPADI (THE SEVEN VEDIC VOWS)
+       ========================================================================== */
+    .saptapadi-section {
+      position: relative;
+    }
+
+    .saptapadi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.6rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .saptapadi-vow-card {
+      background: rgba(30, 5, 14, 0.65);
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      border-radius: 1.4rem;
+      padding: 1.8rem 1.6rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .saptapadi-vow-card:hover {
+      border-color: var(--gold-400);
+      background: rgba(45, 8, 22, 0.75);
+      transform: translateY(-4px);
+    }
+
+    .vow-step-num {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--gold-500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--gold-300);
+      font-size: 1.1rem;
+    }
+
+    .vow-content h5 {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      color: var(--gold-200);
+      margin-bottom: 0.3rem;
+    }
+
+    .vow-content p {
+      font-size: 0.84rem;
+      color: var(--text-gold-light);
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    /* ==========================================================================
+       SECTION 6: AUSPICIOUS COUNTDOWN CLOCK
+       ========================================================================== */
+    .countdown-section {
+      text-align: center;
+      position: relative;
+    }
+
+    .countdown-capsule-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.6rem;
+      flex-wrap: wrap;
+      margin: 0 auto 3rem;
+      max-width: 760px;
+    }
+
+    .countdown-time-pod {
+      min-width: 120px;
+      background: linear-gradient(160deg, rgba(42, 7, 20, 0.85) 0%, rgba(20, 3, 9, 0.95) 100%);
+      border: 1px solid var(--gold-500);
+      border-radius: 1.5rem;
+      padding: 1.8rem 1.4rem;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), inset 0 1px 2px rgba(255, 244, 204, 0.2);
+    }
+
+    @media (max-width: 540px) {
+      .countdown-time-pod {
+        min-width: 90px;
+        padding: 1.2rem 0.8rem;
+      }
+    }
+
+    .countdown-num {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: var(--sacred-ivory);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .countdown-unit {
+      font-family: var(--font-serif);
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-400);
+    }
+
+    /* Add To Calendar Button */
+    .btn-calendar-sync {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.9rem 2.4rem;
+      background: var(--gold-foil-gradient);
+      border: none;
+      border-radius: 999px;
+      color: #1a040b;
+      font-family: var(--font-serif);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
+      transition: all 0.3s ease;
+    }
+
+    .btn-calendar-sync:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 14px 40px rgba(212, 175, 55, 0.55);
+    }
+
+    /* ==========================================================================
+       SECTION 7: THE SACRED VENUE (MJ MAHAL, RANIPET) - APPROPRIATE MANDAP ICONS
+       ========================================================================== */
+    .venue-section {
+      position: relative;
+    }
+
+    .venue-palace-box {
+      max-width: 1040px;
+      margin: 0 auto;
+      background: rgba(30, 5, 14, 0.8);
+      border: 1px solid var(--gold-500);
+      border-radius: 2.2rem;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.85);
+    }
+
+    @media (max-width: 900px) {
+      .venue-palace-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .venue-visual-frame {
+      position: relative;
+      min-height: 380px;
+      overflow: hidden;
+    }
+
+    .venue-visual-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.1) brightness(0.92);
+      transition: transform 0.8s ease;
+    }
+
+    .venue-palace-box:hover .venue-visual-frame img {
+      transform: scale(1.04);
+    }
+
+    .venue-details-pane {
+      padding: 3.5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+      .venue-details-pane {
+        padding: 2.2rem 1.6rem;
+      }
+    }
+
+    .venue-kalyana-tag {
+      font-family: var(--font-serif);
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-400);
+      margin-bottom: 0.8rem;
+    }
+
+    .venue-palace-name {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.2vw, 2.8rem);
+      font-weight: 700;
+      color: var(--sacred-ivory);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .venue-address-prose {
+      font-size: 0.95rem;
+      color: var(--text-gold-light);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .venue-buttons-row {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-venue-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 999px;
+      font-family: var(--font-serif);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-venue-action.primary {
+      background: var(--gold-foil-gradient);
+      color: #1a040b;
+      border: none;
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+    }
+    .btn-venue-action.primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(212, 175, 55, 0.55);
+    }
+
+    .btn-venue-action.secondary {
+      background: transparent;
+      color: var(--gold-300);
+      border: 1px solid var(--gold-500);
+    }
+    .btn-venue-action.secondary:hover {
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--sacred-ivory);
+    }
+
+    /* ==========================================================================
+       SECTION 8: ROYAL FOOTER & AUSPICIOUS BLESSING SUMMARY
+       ========================================================================== */
+    .royal-closing-footer {
+      position: relative;
+      text-align: center;
+      padding: 7rem 2rem 5rem;
+      background: radial-gradient(circle at 50% 100%, rgba(93, 18, 48, 0.4) 0%, transparent 70%);
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .footer-mangala-verse {
+      font-family: var(--font-editorial);
+      font-style: italic;
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      color: var(--gold-200);
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+    }
+
+    .footer-couple-signature {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      color: var(--sacred-ivory);
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .footer-host-tribute {
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      color: var(--sandalwood);
+      text-transform: uppercase;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-copyright {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      color: var(--text-muted);
+      opacity: 0.7;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================================
+       SCROLL-TRIGGER REVEAL SYSTEM
+       ========================================================================== */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.9s var(--ease-royal), transform 0.9s var(--ease-royal);
+      will-change: opacity, transform;
+    }
+
+    .reveal-item.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Canvas for Golden Stardust Particles -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Canvas for Akshathai / Flower Petal Shower Blessings -->
+  <canvas id="blessing-canvas"></canvas>
+
+  <!-- Film Grain Noise Overlay -->
+  <div class="bg-grain-overlay"></div>
+
+  <!-- Custom Cursor (Desktop) -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ==========================================================================
+       CEREMONIAL ROYAL PATRIKA ENVELOPE (INTERACTIVE INVITATION UNVEILING)
+       ========================================================================== -->
+  <aside class="royal-patrika-screen" id="patrikaScreen" aria-label="Royal Wedding Patrika Opening Screen">
+    <div class="patrika-envelope-stage" id="patrikaEnvelope" role="button" tabindex="0" aria-label="Touch to break seal and open wedding invitation">
+      <div class="patrika-inner-border"></div>
+
+      <!-- Sacred Corner Mandap Motifs -->
+      <svg class="corner-mandap-motif corner-tl" viewBox="0 0 32 32"><path d="M2 30V2h28 M2 10h14a6 6 0 0 1 6 6v14"/></svg>
+      <svg class="corner-mandap-motif corner-tr" viewBox="0 0 32 32"><path d="M2 30V2h28 M2 10h14a6 6 0 0 1 6 6v14"/></svg>
+      <svg class="corner-mandap-motif corner-bl" viewBox="0 0 32 32"><path d="M2 30V2h28 M2 10h14a6 6 0 0 1 6 6v14"/></svg>
+      <svg class="corner-mandap-motif corner-br" viewBox="0 0 32 32"><path d="M2 30V2h28 M2 10h14a6 6 0 0 1 6 6v14"/></svg>
+
+      <div class="shloka-invocation">|| ॐ श्री गणेशाय नमः ||</div>
+      <div class="shloka-subtext">|| மாங்கல்யம் தந்துனானேன மம ஜீவனஹேதுனா ||</div>
+
+      <!-- Royal Wax Seal Stamp -->
+      <div class="wax-seal-wrapper">
+        <div class="wax-seal-outer-flame"></div>
+        <div class="wax-seal-stamp">
+          <span class="wax-seal-monogram">Y & M</span>
+          <span class="wax-seal-sub">2027</span>
+        </div>
+      </div>
+
+      <h1 class="patrika-headline">Royal Wedding Patrika</h1>
+      <p class="patrika-names">Yogalakshmi & Manoj</p>
+
+      <button class="patrika-btn-open" type="button">
+        <!-- Sacred Diya Icon -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2c0 3-2 5-2 8a4 4 0 0 0 8 0c0-3-2-5-2-8z" fill="currentColor"/>
+          <path d="M4 18c0-3 3-5 8-5s8 2 8 5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/>
+        </svg>
+        <span>Unveil Royal Invitation</span>
+      </button>
+
+      <div>
+        <button class="patrika-skip-text" id="btnSkipPatrika" type="button">Or Scroll To Enter Directly ↓</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       ROYAL FLOATING NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="royal-floating-nav" id="royalNav" aria-label="Wedding Navigation">
+    <a href="#hero" class="nav-brand-monogram">
+      <!-- Sacred Kalasam/Deepam Motif -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M12 3a3 3 0 0 1 3 3c0 2-3 5-3 5s-3-3-3-5a3 3 0 0 1 3-3z" fill="currentColor"/>
+        <path d="M6 14c0-3 2.5-4 6-4s6 1 6 4v3a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-3z"/>
+      </svg>
+      <span>Y & M</span>
+    </a>
+
+    <ul class="nav-menu-links">
+      <li><a href="#hero" class="nav-link-item active">Home</a></li>
+      <li><a href="#couple" class="nav-link-item">The Couple</a></li>
+      <li><a href="#ceremonies" class="nav-link-item">Muhurtham</a></li>
+      <li><a href="#schedule" class="nav-link-item">Rituals</a></li>
+      <li><a href="#venue" class="nav-link-item">Venue</a></li>
+    </ul>
+
+    <div class="nav-action-cluster">
+      <button class="btn-nav-blessing" id="btnNavBlessing" type="button" aria-label="Shower Sacred Blessings">
+        <span>Bless Couple</span>
+        <span>✦</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Floating Audio Engine Control Button -->
+  <button class="audio-toggle-btn" id="audioToggleBtn" type="button" aria-label="Play Vedic Shehnai Ambient Music">
+    <div class="audio-sound-rings"></div>
+    <!-- Sacred Temple Bell / Sound Icon -->
+    <svg id="audioIcon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold-300)" stroke-width="1.8">
+      <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+      <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+      <line x1="12" y1="2" x2="12" y2="4"/>
+    </svg>
+  </button>
+
+  <!-- Floating Shower Blessings Button -->
+  <button class="blessing-float-btn" id="btnFloatBlessing" type="button">
+    <!-- Sacred Lotus Icon -->
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M12 4c1 4 4 6 7 7-3 1-5 4-7 9-2-5-4-8-7-9 3-1 6-3 7-7z" fill="currentColor"/>
+    </svg>
+    <span>Shower Blessings (அட்சதை)</span>
+  </button>
+
+  <!-- Inactivity 5s Hand Scroll Prompt -->
+  <div class="hand-scroll-prompt" id="handScrollPrompt">
+    <svg class="hand-icon-bounce" viewBox="0 0 32 32" fill="none" stroke="var(--gold-400)" stroke-width="1.8">
+      <path d="M16 6 V15 M13 9.5 V15 M19 9.5 V15 M10 13 V16 M22 13 V17.5 C22 23 18.5 27 14 27 C9.5 27 7 23 7 19 L10 13"/>
+      <path d="M16 2 L16 5 M13 3 L14 5 M19 3 L18 5"/>
+    </svg>
+    <span>Scroll to Explore</span>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION: THE AUSPICIOUS ROYAL UNION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Sacred Rotating Kolam / Mandala -->
+      <svg class="hero-sacred-mandala" viewBox="0 0 200 200" fill="none" stroke="var(--gold-400)">
+        <circle cx="100" cy="100" r="96" stroke-width="0.75" stroke-dasharray="3 5"/>
+        <circle cx="100" cy="100" r="82" stroke-width="0.5"/>
+        <circle cx="100" cy="100" r="68" stroke-width="0.75" stroke-dasharray="6 4"/>
+        <circle cx="100" cy="100" r="42" stroke-width="0.5"/>
+        <!-- 8 Sacred Lotus Petals -->
+        <path d="M100 18 C115 50 115 70 100 100 C85 70 85 50 100 18 Z" stroke-width="0.75"/>
+        <path d="M100 182 C115 150 115 130 100 100 C85 130 85 150 100 182 Z" stroke-width="0.75"/>
+        <path d="M18 100 C50 115 70 115 100 100 C70 85 50 85 18 100 Z" stroke-width="0.75"/>
+        <path d="M182 100 C150 115 130 115 100 100 C130 85 150 85 182 100 Z" stroke-width="0.75"/>
+        <path d="M42 42 C72 58 84 76 100 100 C76 84 58 72 42 42 Z" stroke-width="0.75"/>
+        <path d="M158 158 C128 142 116 124 100 100 C124 116 142 128 158 158 Z" stroke-width="0.75"/>
+        <path d="M158 42 C142 72 124 84 100 100 C116 76 128 58 158 42 Z" stroke-width="0.75"/>
+        <path d="M42 158 C58 128 76 116 100 100 C84 124 72 142 42 158 Z" stroke-width="0.75"/>
+      </svg>
+
+      <div class="hero-content">
+        <div class="reveal-item">
+          <div class="sacred-shanti-mantra">|| ॐ श्री गणेशाय नमः • சுபமங்களம் ||</div>
+        </div>
+
+        <div class="reveal-item">
+          <p class="hero-announcement">Together With Our Families, We Joyfully Invite You To Celebrate The Wedding Of</p>
+        </div>
+
+        <div class="reveal-item">
+          <h2 class="hero-couple-titles">
+            <span>Yogalakshmi</span>
+            <span class="hero-ampersand-sign">&</span>
+            <span>Manoj</span>
+          </h2>
+        </div>
+
+        <div class="reveal-item">
+          <p class="hero-sub-verse">
+            "Bound by sacred Vedic vows, guided by eternal affection, and blessed by the divine light of our ancestors, two souls embark upon a lifelong journey of love and harmony."
+          </p>
+        </div>
+
+        <div class="reveal-item">
+          <div class="hero-ceremonial-pills">
+            <!-- Auspicious Muhurtham Sunrise Pill -->
+            <div class="ceremonial-pill-item">
+              <!-- Sacred Sunrise Surya Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="5" fill="currentColor"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+              </svg>
+              <span>Wednesday • 20 January 2027</span>
+            </div>
+
+            <!-- Brahma Muhurtham Time Pill -->
+            <div class="ceremonial-pill-item">
+              <!-- Sacred Kuthuvilakku/Diya Flame -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2c0 3-2 5-2 8a4 4 0 0 0 8 0c0-3-2-5-2-8z" fill="currentColor"/>
+                <line x1="12" y1="14" x2="12" y2="21"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+              </svg>
+              <span>Muhurtham: 6:30 AM – 7:30 AM</span>
+            </div>
+
+            <!-- Venue Pill -->
+            <div class="ceremonial-pill-item">
+              <!-- Sacred Temple Mandapam Arch -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2 L2 9 L22 9 Z" fill="currentColor"/>
+                <line x1="4" y1="9" x2="4" y2="21"/>
+                <line x1="12" y1="9" x2="12" y2="21"/>
+                <line x1="20" y1="9" x2="20" y2="21"/>
+                <line x1="2" y1="21" x2="22" y2="21"/>
+              </svg>
+              <span>MJ Mahal, Ranipet</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-item">
+          <a href="#couple" class="hero-scroll-cue">
+            <!-- Animated Sacred Diya -->
+            <svg class="cue-diya-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 2c0 3-2 5-2 8a4 4 0 0 0 8 0c0-3-2-5-2-8z" fill="var(--haldi-gold)"/>
+              <path d="M4 17c0-2.5 3-4 8-4s8 1.5 8 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/>
+            </svg>
+            <span>Scroll to Unfold Our Story</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: THE AUSPICIOUS COUPLE (PURPOSEFUL TEMPLE SANCTUM ARCHES)
+         ========================================================================== -->
+    <section class="couple-section" id="couple">
+      <div class="section-header-royal reveal-item">
+        <span class="sacred-deity-invocation">Subha Muhurtham</span>
+        <span class="script-sub-title">Two Souls, One Sacred Bond</span>
+        <h3 class="royal-heading">The Auspicious <span class="royal-heading-gold">Couple</span></h3>
+        <div class="sacred-divider">
+          <div class="flourish-line"></div>
+          <!-- Sacred Lotus Motif -->
+          <svg viewBox="0 0 24 24"><path d="M12 3c1 3.5 3.5 5.5 6 6.5-2.5 1-4.5 3.5-6 8-1.5-4.5-3.5-7-6-8 2.5-1 5-3 6-6.5z"/></svg>
+          <div class="flourish-line"></div>
+        </div>
+      </div>
+
+      <div class="couple-portrait-grid">
+        <!-- Bride: Yogalakshmi in Temple Arch -->
+        <div class="couple-alcove-card reveal-item">
+          <div class="temple-arch-enclosure">
+            <!-- Temple Arch Crown Motif -->
+            <svg class="arch-crown-crest" viewBox="0 0 48 36"><path d="M24 2 L29 14 L42 16 L32 25 L35 34 L24 28 L13 34 L16 25 L6 16 L19 14 Z"/></svg>
+            <div class="temple-arch-inner">
+              <img 
+                src="./assets/bride_yogalakshmi.jpg" 
+                alt="The Radiant Bride, Yogalakshmi" 
+                loading="lazy"
+                onerror="this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=85';"
+              />
+            </div>
+          </div>
+          <span class="couple-role-tag">The Bride • மணமகள்</span>
+          <h4 class="couple-royal-name">Yogalakshmi</h4>
+          <p class="couple-parents-tribute">Daughter of Traditional & Caring Parents</p>
+          <p class="couple-heart-quote">
+            "A serene soul whose warmth brightens every room, carrying the grace of tradition and the tenderness of deep devotion."
+          </p>
+        </div>
+
+        <!-- Groom: Manoj in Temple Arch -->
+        <div class="couple-alcove-card reveal-item">
+          <div class="temple-arch-enclosure">
+            <!-- Temple Arch Crown Motif -->
+            <svg class="arch-crown-crest" viewBox="0 0 48 36"><path d="M24 2 L29 14 L42 16 L32 25 L35 34 L24 28 L13 34 L16 25 L6 16 L19 14 Z"/></svg>
+            <div class="temple-arch-inner">
+              <img 
+                src="./assets/groom_manoj.jpg" 
+                alt="The Noble Groom, Manoj" 
+                loading="lazy"
+                onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=85';"
+              />
+            </div>
+          </div>
+          <span class="couple-role-tag">The Groom • மணமகன்</span>
+          <h4 class="couple-royal-name">Manoj</h4>
+          <p class="couple-parents-tribute">Son of Respected & Loving Parents</p>
+          <p class="couple-heart-quote">
+            "A pillar of unwavering devotion and noble character, whose steadfast heart promises to protect and honor her forever."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: SACRED CEREMONIAL DETAILS (AUTHENTIC INDIAN ICONS ONLY - NO DOLLARS)
+         ========================================================================== -->
+    <section class="sacred-details-section" id="ceremonies">
+      <div class="section-header-royal reveal-item">
+        <span class="sacred-deity-invocation">Kalyana Vaibhavam</span>
+        <span class="script-sub-title">Auspicious Dates & Timings</span>
+        <h3 class="royal-heading">Sacred <span class="royal-heading-gold">Ceremonies</span></h3>
+        <div class="sacred-divider">
+          <div class="flourish-line"></div>
+          <!-- Sacred Deepam Icon -->
+          <svg viewBox="0 0 24 24"><path d="M12 2c0 3-2 5-2 8a4 4 0 0 0 8 0c0-3-2-5-2-8z"/></svg>
+          <div class="flourish-line"></div>
+        </div>
+      </div>
+
+      <div class="details-royal-grid">
+        <!-- Card 1: Reception (Moon & Stars Icon) -->
+        <div class="ceremony-card reveal-item">
+          <div class="sacred-icon-pod">
+            <!-- Authentic Evening Crescent Moon & Stars Icon -->
+            <svg viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>
+              <circle cx="19" cy="5" r="1" fill="var(--gold-400)"/>
+              <circle cx="16" cy="2" r="0.7" fill="var(--gold-400)"/>
+            </svg>
+          </div>
+          <div class="ceremony-badge">Evening Sangeet & Dinner</div>
+          <h4 class="ceremony-title">Grand Reception</h4>
+          <div class="ceremony-time">19 January 2027 • 6:30 PM</div>
+          <p class="ceremony-desc">
+            Tuesday Evening onwards at MJ Mahal.<br/>
+            An enchanting evening of joyful music, family blessings, and a sumptuous grand feast.
+          </p>
+        </div>
+
+        <!-- Card 2: Sacred Muhurtham (Sacred Deepam / Kuthuvilakku & Rising Sun) -->
+        <div class="ceremony-card highlight reveal-item">
+          <div class="sacred-icon-pod">
+            <!-- Authentic Sacred Kuthuvilakku / Diya Lamp Icon (NO DOLLAR SIGN) -->
+            <svg viewBox="0 0 24 24">
+              <!-- Auspicious Sacred Diya with Flickering Flame -->
+              <path d="M12 2c0 3-2.5 5-2.5 7.5a2.5 2.5 0 0 0 5 0C14.5 7 12 5 12 2z" fill="var(--haldi-gold)"/>
+              <path d="M5 14c0-2.5 2.5-4 7-4s7 1.5 7 4a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/>
+              <path d="M12 16v4"/>
+              <path d="M8 20h8"/>
+            </svg>
+          </div>
+          <div class="ceremony-badge" style="color: var(--haldi-gold);">The Auspicious Muhurtham</div>
+          <h4 class="ceremony-title">Vedic Muhurtham</h4>
+          <div class="ceremony-time" style="color: #fff4cc;">20 January 2027 • 6:30 AM</div>
+          <p class="ceremony-desc">
+            Wednesday Morning • Brahma Muhurtham.<br/>
+            The sacred tying of the Thirumangalyam amidst Vedic chants, Nadaswaram, and family prayers.
+          </p>
+        </div>
+
+        <!-- Card 3: Mandapam / Venue (Authentic Temple Gopuram / Mandap Arch Icon) -->
+        <div class="ceremony-card reveal-item">
+          <div class="sacred-icon-pod">
+            <!-- Authentic Temple Sanctum Mandap Icon (NO DOLLAR SIGN) -->
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2l-9 6h18z" fill="currentColor"/>
+              <path d="M5 8v12h14V8"/>
+              <path d="M9 20v-7h6v7"/>
+              <line x1="2" y1="20" x2="22" y2="20"/>
+            </svg>
+          </div>
+          <div class="ceremony-badge">Sacred Venue</div>
+          <h4 class="ceremony-title">MJ Mahal</h4>
+          <div class="ceremony-time">Ranipet, Tamil Nadu</div>
+          <p class="ceremony-desc">
+            Grand air-conditioned wedding palace with royal decor, vast dining hall, and ample guest parking.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: THE VEDIC SCHEDULE & RITUALS (TAMIL WEDDING TRADITIONS)
+         ========================================================================== -->
+    <section class="schedule-section" id="schedule">
+      <div class="section-header-royal reveal-item">
+        <span class="sacred-deity-invocation">Thirumana Murai</span>
+        <span class="script-sub-title">Timeless Vedic Ceremonies</span>
+        <h3 class="royal-heading">Ceremonial <span class="royal-heading-gold">Schedule</span></h3>
+        <div class="sacred-divider">
+          <div class="flourish-line"></div>
+          <!-- Sacred Kalasam/Kumbha Motif -->
+          <svg viewBox="0 0 24 24"><path d="M12 2c0 2-2 4-2 6h4c0-2-2-4-2-6z M6 13c0-3 2.5-4 6-4s6 1 6 4v4a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4z"/></svg>
+          <div class="flourish-line"></div>
+        </div>
+      </div>
+
+      <div class="schedule-grand-container reveal-item">
+        <!-- Day 1: Tuesday 19 January -->
+        <div class="schedule-event-day-cluster">
+          <div class="schedule-day-banner">
+            <h4 class="day-banner-title">Tuesday • 19 January 2027</h4>
+            <span class="day-banner-tag">Reception & Sangeet</span>
+          </div>
+
+          <ul class="ritual-stream">
+            <li class="ritual-stream-item">
+              <div class="ritual-time-badge">6:30 PM</div>
+              <div class="ritual-details-box">
+                <h4>Nichayathartham & Grand Welcoming</h4>
+                <p>Auspicious welcoming of the groom's family followed by traditional engagement blessings.</p>
+              </div>
+            </li>
+            <li class="ritual-stream-item">
+              <div class="ritual-time-badge">7:30 PM</div>
+              <div class="ritual-details-box">
+                <h4>Reception & Melodious Sangeet</h4>
+                <p>Celebratory evening on stage with loved ones, photography, and live classical music.</p>
+              </div>
+            </li>
+            <li class="ritual-stream-item">
+              <div class="ritual-time-badge">8:30 PM</div>
+              <div class="ritual-details-box">
+                <h4>Royal Reception Banquet</h4>
+                <p>Sumptuous multi-course feast featuring traditional South Indian specialties and desserts.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Day 2: Wednesday 20 January -->
+        <div class="schedule-event-day-cluster" style="margin-bottom: 0;">
+          <div class="schedule-day-banner">
+            <h4 class="day-banner-title">Wednesday • 20 January 2027</h4>
+            <span class="day-banner-tag" style="border-color: var(--haldi-gold); color: #fff4cc;">Sacred Muhurtham</span>
+          </div>
+
+          <ul class="ritual-stream">
+            <li class="ritual-stream-item">
+              <div class="ritual-time-badge">5:30 AM</div>
+              <div class="ritual-details-box">
+                <h4>Mangala Snanam & Kasi Yatra</h4>
+                <p>Sacred dawn purification rituals and the symbolic philosophical journey of the groom.</p>
+              </div>
+            </li>
+            <li class="ritual-stream-item">
+              <div class="ritual-time-badge" style="color: var(--haldi-gold);">6:30 AM – 7:30 AM</div>
+              <div class="ritual-details-box">
+                <h4 style="color: var(--gold-200);">Mangalya Dhaaranam (Thali Kattu)</h4>
+                <p>The sacred tying of the Thirumangalyam at the auspicious Brahma Muhurtham amidst chanting of Vedic mantras.</p>
+              </div>
+            </li>
+            <li class="ritual-stream-item">
+              <div class="ritual-time-badge">7:45 AM</div>
+              <div class="ritual-details-box">
+                <h4>Saptapadi & Arundhati Paarthal</h4>
+                <p>Seven sacred steps taken together around the holy Agni, taking eternal vows of companionship.</p>
+              </div>
+            </li>
+            <li class="ritual-stream-item">
+              <div class="ritual-time-badge">8:30 AM</div>
+              <div class="ritual-details-box">
+                <h4>Traditional Plantain Leaf Feast (Virundhu)</h4>
+                <p>Authentic wedding breakfast and feast served on freshly cut sacred banana plantain leaves.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: SACRED SAPTAPADI (THE 7 SACRED VEDIC VOWS)
+         ========================================================================== -->
+    <section class="saptapadi-section" id="saptapadi">
+      <div class="section-header-royal reveal-item">
+        <span class="sacred-deity-invocation">Agni Sakshi</span>
+        <span class="script-sub-title">Seven Steps Around The Holy Fire</span>
+        <h3 class="royal-heading">The Sacred <span class="royal-heading-gold">Saptapadi</span></h3>
+        <div class="sacred-divider">
+          <div class="flourish-line"></div>
+          <!-- Sacred Fire / Agni Motif -->
+          <svg viewBox="0 0 24 24"><path d="M12 2c1 3 3 5 5 7-1 4-4 7-5 11-1-4-4-7-5-11 2-2 4-4 5-7z"/></svg>
+          <div class="flourish-line"></div>
+        </div>
+      </div>
+
+      <div class="saptapadi-grid">
+        <div class="saptapadi-vow-card reveal-item">
+          <div class="vow-step-num">1</div>
+          <div class="vow-content">
+            <h5>Nourishment & Health</h5>
+            <p>For mutual sustenance, health, and honoring one another through life's seasons.</p>
+          </div>
+        </div>
+
+        <div class="saptapadi-vow-card reveal-item">
+          <div class="vow-step-num">2</div>
+          <div class="vow-content">
+            <h5>Strength & Devotion</h5>
+            <p>For spiritual, physical, and emotional fortitude to conquer every adversity together.</p>
+          </div>
+        </div>
+
+        <div class="saptapadi-vow-card reveal-item">
+          <div class="vow-step-num">3</div>
+          <div class="vow-content">
+            <h5>Prosperity & Honor</h5>
+            <p>For honest livelihood, sharing our resources, and upholding our families' dignity.</p>
+          </div>
+        </div>
+
+        <div class="saptapadi-vow-card reveal-item">
+          <div class="vow-step-num">4</div>
+          <div class="vow-content">
+            <h5>Joy & Mutual Respect</h5>
+            <p>For lifelong harmony, companionship, and respecting the uniqueness of each other.</p>
+          </div>
+        </div>
+
+        <div class="saptapadi-vow-card reveal-item">
+          <div class="vow-step-num">5</div>
+          <div class="vow-content">
+            <h5>Generations & Blessings</h5>
+            <p>For raising noble, compassionate children and preserving the wisdom of our heritage.</p>
+          </div>
+        </div>
+
+        <div class="saptapadi-vow-card reveal-item">
+          <div class="vow-step-num">6</div>
+          <div class="vow-content">
+            <h5>Longevity & Peace</h5>
+            <p>For enduring togetherness throughout all twelve months and across all phases of life.</p>
+          </div>
+        </div>
+
+        <div class="saptapadi-vow-card reveal-item" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto;">
+          <div class="vow-step-num" style="background: var(--gold-500); color: #1a040b;">7</div>
+          <div class="vow-content">
+            <h5 style="color: var(--gold-300);">Eternal Companionship</h5>
+            <p>"Having walked seven steps with you, I have become your friend. Let us never be parted."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: COUNTDOWN TO AUSPICIOUS MUHURTHAM
+         ========================================================================== -->
+    <section class="countdown-section" id="countdown">
+      <div class="section-header-royal reveal-item">
+        <span class="sacred-deity-invocation">Kaala Ganana</span>
+        <span class="script-sub-title">Until The Sacred Knot Is Tied</span>
+        <h3 class="royal-heading">Counting Down To <span class="royal-heading-gold">Muhurtham</span></h3>
+        <div class="sacred-divider">
+          <div class="flourish-line"></div>
+          <!-- Sacred Lotus Motif -->
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div class="flourish-line"></div>
+        </div>
+      </div>
+
+      <div class="countdown-capsule-row reveal-item">
+        <div class="countdown-time-pod">
+          <div class="countdown-num" id="valDays">00</div>
+          <div class="countdown-unit">Days</div>
+        </div>
+        <div class="countdown-time-pod">
+          <div class="countdown-num" id="valHours">00</div>
+          <div class="countdown-unit">Hours</div>
+        </div>
+        <div class="countdown-time-pod">
+          <div class="countdown-num" id="valMinutes">00</div>
+          <div class="countdown-unit">Minutes</div>
+        </div>
+        <div class="countdown-time-pod">
+          <div class="countdown-num" id="valSeconds">00</div>
+          <div class="countdown-unit">Seconds</div>
+        </div>
+      </div>
+
+      <div class="reveal-item">
+        <button class="btn-calendar-sync" id="btnAddToCalendar" type="button">
+          <!-- Calendar Icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          <span>Save Date to Google / Apple Calendar</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7: THE SACRED VENUE (MJ MAHAL, RANIPET)
+         ========================================================================== -->
+    <section class="venue-section" id="venue">
+      <div class="section-header-royal reveal-item">
+        <span class="sacred-deity-invocation">Thirumana Mandapam</span>
+        <span class="script-sub-title">Where Two Worlds Become One</span>
+        <h3 class="royal-heading">The Wedding <span class="royal-heading-gold">Venue</span></h3>
+        <div class="sacred-divider">
+          <div class="flourish-line"></div>
+          <!-- Sacred Temple Gopuram Motif -->
+          <svg viewBox="0 0 24 24"><path d="M12 2l-9 6h18z M5 8v12h14V8 M9 20v-7h6v7"/></svg>
+          <div class="flourish-line"></div>
+        </div>
+      </div>
+
+      <div class="venue-palace-box reveal-item">
+        <div class="venue-visual-frame">
+          <img 
+            src="./assets/cinematic_mandap_walk.jpg" 
+            alt="MJ Mahal Mandap View, Ranipet" 
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85';"
+          />
+        </div>
+
+        <div class="venue-details-pane">
+          <span class="venue-kalyana-tag">Auspicious Kalyana Mandapam</span>
+          <h4 class="venue-palace-name">MJ Mahal</h4>
+          <p class="venue-address-prose">
+            <strong>Ranipet, Tamil Nadu, India.</strong><br/>
+            Conveniently situated in the historic city of Ranipet, featuring grand air-conditioned banquet halls, spacious dining facilities, and peaceful temple-style hospitality.
+          </p>
+
+          <div class="venue-buttons-row">
+            <a 
+              href="https://maps.google.com/?q=MJ+Mahal+Ranipet+Tamil+Nadu" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn-venue-action primary"
+            >
+              <!-- Temple Location Pin SVG -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Get Google Maps Directions</span>
+            </a>
+
+            <button class="btn-venue-action secondary" id="btnCopyAddress" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+              <span id="copyAddressLabel">Copy Address</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 8: ROYAL CLOSING FOOTER
+         ========================================================================== -->
+    <footer class="royal-closing-footer">
+      <div class="reveal-item">
+        <p class="footer-mangala-verse">
+          "With love in our hearts and gratitude to our elders, we await your gracious presence and heartfelt blessings on this sacred day."
+        </p>
+        <div class="footer-couple-signature">Yogalakshmi & Manoj</div>
+        <p class="footer-host-tribute">
+          Welcomed with Warmth by the Bride's and Groom's Families
+        </p>
+        <p class="footer-copyright">
+          20 January 2027 • MJ Mahal, Ranipet • Made with Devotion & Love
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ==========================================================================
+       JAVASCRIPT: CEREMONIAL MOTION, AUDIO SYNTHESIS & BLESSING SHOWER ENGINE
+       ========================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      /* 1. Configuration */
+      const WEDDING_DATE = new Date("2027-01-20T06:30:00+05:30");
+      const VENUE_ADDRESS = "MJ Mahal, Ranipet, Tamil Nadu, India";
+
+      /* 2. Patrika Screen Unveiling */
+      const patrikaScreen = document.getElementById('patrikaScreen');
+      const patrikaEnvelope = document.getElementById('patrikaEnvelope');
+      const btnSkipPatrika = document.getElementById('btnSkipPatrika');
+
+      function unveilPatrika() {
+        if (!patrikaScreen || patrikaScreen.classList.contains('unveiled')) return;
+        patrikaScreen.classList.add('unveiled');
+        triggerBlessingShower(80); // Auspicious flower burst upon opening!
+        tryStartAudio();
+      }
+
+      if (patrikaEnvelope) {
+        patrikaEnvelope.addEventListener('click', unveilPatrika);
+      }
+      if (btnSkipPatrika) {
+        btnSkipPatrika.addEventListener('click', (e) => {
+          e.stopPropagation();
+          unveilPatrika();
+        });
+      }
+
+      // Auto unveil if user begins scrolling vigorously
+      window.addEventListener('wheel', (e) => {
+        if (e.deltaY > 20) unveilPatrika();
+      }, { passive: true });
+
+      /* 3. Inactivity Hand Scroll Prompt (5 seconds) */
+      const handPrompt = document.getElementById('handScrollPrompt');
+      let hasScrolled = false;
+      let idleTimer = setTimeout(() => {
+        if (!hasScrolled && handPrompt) {
+          handPrompt.classList.add('visible');
+        }
+      }, 5000);
+
+      window.addEventListener('scroll', () => {
+        if (!hasScrolled) {
+          hasScrolled = true;
+          clearTimeout(idleTimer);
+          if (handPrompt) {
+            handPrompt.classList.remove('visible');
+            setTimeout(() => handPrompt.remove(), 1000);
+          }
+        }
+      }, { passive: true });
+
+      /* 4. Intersection Observer for Smooth Scroll Reveals */
+      const revealItems = document.querySelectorAll('.reveal-item');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      revealItems.forEach((el) => observer.observe(el));
+
+      /* 5. Custom Golden Cursor (Desktop) */
+      const cursorDot = document.getElementById('cursorDot');
+      const cursorRing = document.getElementById('cursorRing');
+
+      if (cursorDot && cursorRing && window.matchMedia('(pointer: fine)').matches) {
+        let mouseX = -100, mouseY = -100;
+        let ringX = -100, ringY = -100;
+
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        });
+
+        function renderCursorRing() {
+          ringX += (mouseX - ringX) * 0.18;
+          ringY += (mouseY - ringY) * 0.18;
+          cursorRing.style.transform = `translate(${ringX}px, ${ringY}px)`;
+          requestAnimationFrame(renderCursorRing);
+        }
+        renderCursorRing();
+
+        // Magnetic hover expansion
+        const interactives = document.querySelectorAll('a, button, [role="button"], .ceremony-card, .double-bezel-card');
+        interactives.forEach((item) => {
+          item.addEventListener('mouseenter', () => {
+            cursorRing.style.width = '56px';
+            cursorRing.style.height = '56px';
+            cursorRing.style.borderColor = '#fff4cc';
+          });
+          item.addEventListener('mouseleave', () => {
+            cursorRing.style.width = '36px';
+            cursorRing.style.height = '36px';
+            cursorRing.style.borderColor = 'var(--gold-500)';
+          });
+        });
+      }
+
+      /* 6. Live Vedic Muhurtham Countdown */
+      const valDays = document.getElementById('valDays');
+      const valHours = document.getElementById('valHours');
+      const valMinutes = document.getElementById('valMinutes');
+      const valSeconds = document.getElementById('valSeconds');
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = WEDDING_DATE.getTime() - now;
+
+        if (diff <= 0) {
+          if (valDays) valDays.textContent = "00";
+          if (valHours) valHours.textContent = "00";
+          if (valMinutes) valMinutes.textContent = "00";
+          if (valSeconds) valSeconds.textContent = "00";
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        if (valDays) valDays.textContent = String(days).padStart(2, '0');
+        if (valHours) valHours.textContent = String(hours).padStart(2, '0');
+        if (valMinutes) valMinutes.textContent = String(minutes).padStart(2, '0');
+        if (valSeconds) valSeconds.textContent = String(seconds).padStart(2, '0');
+      }
+
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+
+      /* 7. Save Date to Google Calendar */
+      const btnAddToCalendar = document.getElementById('btnAddToCalendar');
+      if (btnAddToCalendar) {
+        btnAddToCalendar.addEventListener('click', () => {
+          const title = encodeURIComponent("Wedding of Yogalakshmi & Manoj");
+          const details = encodeURIComponent("Auspicious wedding celebration of Yogalakshmi & Manoj at MJ Mahal, Ranipet, Tamil Nadu.");
+          const location = encodeURIComponent(VENUE_ADDRESS);
+          const gCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=20270120T010000Z/20270120T060000Z&details=${details}&location=${location}`;
+          window.open(gCalUrl, '_blank');
+        });
+      }
+
+      /* 8. Copy Venue Address */
+      const btnCopyAddress = document.getElementById('btnCopyAddress');
+      const copyAddressLabel = document.getElementById('copyAddressLabel');
+      if (btnCopyAddress && copyAddressLabel) {
+        btnCopyAddress.addEventListener('click', () => {
+          navigator.clipboard.writeText(VENUE_ADDRESS).then(() => {
+            copyAddressLabel.textContent = "Address Copied!";
+            setTimeout(() => {
+              copyAddressLabel.textContent = "Copy Address";
+            }, 2500);
+          });
+        });
+      }
+
+      /* ==========================================================================
+         9. INTERACTIVE AKSHATHAI & PUSHPANJALI (FLOWER & HOLY RICE SHOWER ENGINE)
+         ========================================================================== */
+      const blessingCanvas = document.getElementById('blessing-canvas');
+      const bCtx = blessingCanvas.getContext('2d');
+      let bWidth = (blessingCanvas.width = window.innerWidth);
+      let bHeight = (blessingCanvas.height = window.innerHeight);
+
+      window.addEventListener('resize', () => {
+        bWidth = blessingCanvas.width = window.innerWidth;
+        bHeight = blessingCanvas.height = window.innerHeight;
+      });
+
+      const petals = [];
+      const petalColors = [
+        'rgba(255, 183, 3, 0.9)',   // Marigold Saffron
+        'rgba(255, 114, 94, 0.85)', // Coral Rose
+        'rgba(255, 230, 109, 0.9)', // Golden Rice (Akshathai)
+        'rgba(247, 214, 224, 0.85)',// Soft Jasmine White/Pink
+        'rgba(212, 175, 55, 0.95)'  // Shimmering Pure Gold Grain
+      ];
+
+      function triggerBlessingShower(count = 60) {
+        for (let i = 0; i < count; i++) {
+          petals.push({
+            x: Math.random() * bWidth,
+            y: -20 - Math.random() * 80,
+            size: 6 + Math.random() * 12,
+            speedY: 2 + Math.random() * 4,
+            speedX: (Math.random() - 0.5) * 3,
+            rotation: Math.random() * 360,
+            rotSpeed: (Math.random() - 0.5) * 5,
+            color: petalColors[Math.floor(Math.random() * petalColors.length)],
+            isRice: Math.random() > 0.6
+          });
+        }
+      }
+
+      function updatePetals() {
+        bCtx.clearRect(0, 0, bWidth, bHeight);
+
+        for (let i = petals.length - 1; i >= 0; i--) {
+          const p = petals[i];
+          p.y += p.speedY;
+          p.x += Math.sin(p.y * 0.02) * p.speedX;
+          p.rotation += p.rotSpeed;
+
+          bCtx.save();
+          bCtx.translate(p.x, p.y);
+          bCtx.rotate((p.rotation * Math.PI) / 180);
+          bCtx.fillStyle = p.color;
+
+          if (p.isRice) {
+            // Draw Akshathai (Sacred Golden Rice Grain)
+            bCtx.beginPath();
+            bCtx.ellipse(0, 0, p.size * 0.35, p.size * 0.8, 0, 0, Math.PI * 2);
+            bCtx.fill();
+          } else {
+            // Draw Sacred Marigold / Lotus Petal
+            bCtx.beginPath();
+            bCtx.moveTo(0, -p.size);
+            bCtx.bezierCurveTo(p.size, -p.size * 0.5, p.size, p.size * 0.5, 0, p.size);
+            bCtx.bezierCurveTo(-p.size, p.size * 0.5, -p.size, -p.size * 0.5, 0, -p.size);
+            bCtx.fill();
+          }
+          bCtx.restore();
+
+          if (p.y > bHeight + 40) {
+            petals.splice(i, 1);
+          }
+        }
+
+        requestAnimationFrame(updatePetals);
+      }
+      updatePetals();
+
+      // Bind Blessing Buttons
+      const btnFloatBlessing = document.getElementById('btnFloatBlessing');
+      const btnNavBlessing = document.getElementById('btnNavBlessing');
+
+      if (btnFloatBlessing) {
+        btnFloatBlessing.addEventListener('click', () => {
+          triggerBlessingShower(70);
+          playTempleBellSound();
+        });
+      }
+      if (btnNavBlessing) {
+        btnNavBlessing.addEventListener('click', () => {
+          triggerBlessingShower(70);
+          playTempleBellSound();
+        });
+      }
+
+      /* ==========================================================================
+         10. SYNTHESIZED VEDIC AUDIO ENGINE (PURE WEB AUDIO API - NO EXTERNAL MP3 DEPENDENCY)
+         ========================================================================== */
+      let audioCtx = null;
+      let isPlayingAudio = false;
+      let tanpuraOsc1 = null;
+      let tanpuraOsc2 = null;
+      let tanpuraGain = null;
+
+      function initVedicAudio() {
+        if (audioCtx) return;
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+
+        // Master Gain
+        tanpuraGain = audioCtx.createGain();
+        tanpuraGain.gain.setValueAtTime(0, audioCtx.currentTime);
+        tanpuraGain.connect(audioCtx.destination);
+
+        // Tanpura Root Note (Sa = D3 ~ 146.83 Hz) & Pa (A3 ~ 220 Hz)
+        tanpuraOsc1 = audioCtx.createOscillator();
+        tanpuraOsc1.type = 'sine';
+        tanpuraOsc1.frequency.setValueAtTime(146.83, audioCtx.currentTime);
+
+        tanpuraOsc2 = audioCtx.createOscillator();
+        tanpuraOsc2.type = 'triangle';
+        tanpuraOsc2.frequency.setValueAtTime(220.00, audioCtx.currentTime);
+
+        tanpuraOsc1.connect(tanpuraGain);
+        tanpuraOsc2.connect(tanpuraGain);
+
+        tanpuraOsc1.start();
+        tanpuraOsc2.start();
+      }
+
+      function playTempleBellSound() {
+        try {
+          if (!audioCtx) initVedicAudio();
+          if (audioCtx.state === 'suspended') audioCtx.resume();
+
+          const bellOsc = audioCtx.createOscillator();
+          const bellGain = audioCtx.createGain();
+
+          bellOsc.type = 'sine';
+          bellOsc.frequency.setValueAtTime(1046.50, audioCtx.currentTime); // High C6 Bell
+          bellOsc.frequency.exponentialRampToValueAtTime(523.25, audioCtx.currentTime + 1.2);
+
+          bellGain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+          bellGain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.5);
+
+          bellOsc.connect(bellGain);
+          bellGain.connect(audioCtx.destination);
+
+          bellOsc.start();
+          bellOsc.stop(audioCtx.currentTime + 1.6);
+        } catch (e) {
+          // Audio blocked or unsupported
+        }
+      }
+
+      function tryStartAudio() {
+        if (!audioCtx) initVedicAudio();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        tanpuraGain.gain.linearRampToValueAtTime(0.08, audioCtx.currentTime + 2);
+        isPlayingAudio = true;
+        updateAudioButtonState();
+      }
+
+      function toggleAudio() {
+        if (!audioCtx) initVedicAudio();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+
+        if (isPlayingAudio) {
+          tanpuraGain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.8);
+          isPlayingAudio = false;
+        } else {
+          tanpuraGain.gain.linearRampToValueAtTime(0.08, audioCtx.currentTime + 1.2);
+          isPlayingAudio = true;
+          playTempleBellSound();
+        }
+        updateAudioButtonState();
+      }
+
+      function updateAudioButtonState() {
+        const audioBtn = document.getElementById('audioToggleBtn');
+        if (!audioBtn) return;
+        if (isPlayingAudio) {
+          audioBtn.style.borderColor = 'var(--gold-300)';
+          audioBtn.style.boxShadow = '0 0 25px rgba(212, 175, 55, 0.6)';
+        } else {
+          audioBtn.style.borderColor = 'var(--gold-500)';
+          audioBtn.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.7)';
+        }
+      }
+
+      const audioToggleBtn = document.getElementById('audioToggleBtn');
+      if (audioToggleBtn) {
+        audioToggleBtn.addEventListener('click', toggleAudio);
+      }
+
+      /* 11. Golden Stardust Dust Canvas Layer */
+      const pCanvas = document.getElementById('particles-canvas');
+      const pCtx = pCanvas.getContext('2d');
+      let pWidth = (pCanvas.width = window.innerWidth);
+      let pHeight = (pCanvas.height = window.innerHeight);
+
+      window.addEventListener('resize', () => {
+        pWidth = pCanvas.width = window.innerWidth;
+        pHeight = pCanvas.height = window.innerHeight;
+      });
+
+      const particleCount = window.innerWidth < 768 ? 25 : 45;
+      const particles = [];
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * pWidth,
+          y: Math.random() * pHeight,
+          radius: Math.random() * 1.8 + 0.6,
+          speedY: -(Math.random() * 0.45 + 0.15),
+          speedX: (Math.random() - 0.5) * 0.25,
+          alpha: Math.random() * 0.6 + 0.2,
+          pulse: Math.random() * 0.02 + 0.01
+        });
+      }
+
+      function renderStardust() {
+        pCtx.clearRect(0, 0, pWidth, pHeight);
+
+        for (let i = 0; i < particles.length; i++) {
+          const pt = particles[i];
+          pt.y += pt.speedY;
+          pt.x += pt.speedX;
+          pt.alpha += Math.sin(pt.y * 0.05) * pt.pulse;
+
+          if (pt.y < -10) {
+            pt.y = pHeight + 10;
+            pt.x = Math.random() * pWidth;
+          }
+
+          pCtx.beginPath();
+          pCtx.arc(pt.x, pt.y, pt.radius, 0, Math.PI * 2);
+          pCtx.fillStyle = `rgba(223, 183, 81, ${Math.max(0.1, Math.min(0.7, pt.alpha))})`;
+          pCtx.fill();
+        }
+
+        requestAnimationFrame(renderStardust);
+      }
+      renderStardust();
+    });
+  </script>
+</body>
+</html>
